@@ -11,10 +11,10 @@ pipeline {
 	}
 
 	stages {
-		stage("test: baseline (jdk8)") {
+		stage("test: baseline (jdk)") {
 			agent {
 				docker {
-					image 'adoptopenjdk/openjdk8:latest'
+					image 'khipu/openjdk17-alpine'
 					args '-v $HOME/.m2:/tmp/jenkins-home/.m2'
 				}
 			}
